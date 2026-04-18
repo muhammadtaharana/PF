@@ -1,0 +1,86 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Text center karne ke liye */
+  overflow: hidden;
+}
+
+.hero-center-content {
+  display: flex;
+  flex-direction: column; /* Items ek ke niche ek aayengi */
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+}
+
+.hero-center-content h1 { 
+  font-size: 4rem; 
+  color: #fff; 
+  margin-bottom: 10px; 
+}
+
+/* Picture Size Barha diya (400px se 500px) */
+.image-container {
+  position: relative;
+  width: 600px; /* Pehle 500px tha, ab bara kar diya */
+  height: 600px; /* Pehle 500px tha, ab bara kar diya */
+  cursor: crosshair;
+  margin-top: 10px;
+}
+
+.base-image, .hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Circle shape ke liye */
+}
+
+.hover-image {
+  -webkit-mask-image: radial-gradient(circle 150px at var(--x) var(--y), black, transparent);
+  mask-image: radial-gradient(circle 150px at var(--x) var(--y), black, transparent);
+  transition: opacity 0.2s ease;
+}
+
+/* Background Name Text */
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15vw;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  z-index: 1;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Buttons */
+.btn-main:hover, .btn-sec:hover {
+  background-color: #ffffff; /* Background pure white ho jaye ga */
+  color: #121212;            /* Text ka color dark kar diya taake white background par dikhe */
+  border-color: #ffffff;     /* Border bhi white rahe ga */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3); /* Thora white glow dene ke liye */
+}
+
+.hero-btns {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+.btn-main, .btn-sec {
+  padding: 12px 30px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
