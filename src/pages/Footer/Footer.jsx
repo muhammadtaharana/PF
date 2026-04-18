@@ -15,7 +15,7 @@ function Footer(){
 
           <a href="https://github.com/muhammadtaharana"><FaGithub/></a>
           <a href="https://linkedin.com/in/muhammad_taha_rao"><FaLinkedin/></a>
-          <a href="https://instagram.com/muhammad-taha-rajput"><FaInstagram/></a>
+          <a href="https://instagram.com/muhammad-taha-rajpoot"><FaInstagram/></a>
 
         </div>
 
