@@ -38,7 +38,7 @@ function Header() {
             <ul className="icons">
                 <li><a href="https://github.com/muhammadtaharana" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
                 <li><a href="https://instagram.com/muhammad_taha_rao" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} /></a></li>
-                <li><a href="https://linkedin.com/in/muhammad-taha-rajput" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                <li><a href="https://linkedin.com/in/muhammad-taha-rajpoot" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a></li>
             </ul>
         </header>
     ) 
