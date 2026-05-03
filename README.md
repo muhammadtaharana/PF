@@ -1,11 +1,11 @@
-![Logo](Photo.png)
-
+<img width="2271" height="1171" alt="image" src="https://github.com/user-attachments/assets/78be9b59-2697-4648-81c1-3e92bf71db74" />
 # Taha Portfolio Showcase 💻
 
 Welcome to Muhammad Taha's Portfolio Showcase!
 A modern and elegant personal portfolio website built to present my projects, skills, and professional journey using React.js.
 
 ---
+<img width="1600" height="1063" alt="image" src="https://github.com/user-attachments/assets/1a225b61-a174-4711-b3f9-30d2ea3d4a85" />
 
 ## 🌟 Website Sections
 
@@ -48,15 +48,15 @@ This project is licensed under the terms described in the [LICENSE](LICENSE) fil
 
 ## 📬 Contact
 
-- Email: mohid.qx@proton.mr
+- Email: 
 - Location: Sindh, Pakistan 
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohidqx/)  
-- GitHub: [GitHub](https://github.com/mohidqx)  
-- Instagram: [Instagram](https://www.instagram.com/mohid.qx?utm_source=ig_web_button_share_sheet)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in//)  
+- GitHub: [GitHub](https://github.com/muhammadtaharana)  
+- Instagram: [Instagram](https://www.instagram.com/?utm_source=ig_web_button_share_sheet)
 
 ---
 
-Made with ❤️ by **[r00t:~#]**
+Made with ❤️ by ****
 
 
 
