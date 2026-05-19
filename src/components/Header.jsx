@@ -1,58 +1,55 @@
 import "./Header.css"
 import { useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 function Header() {
+  const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
-    const [scrolled, setScrolled] = useState(false)
-    const [menuOpen, setMenuOpen] = useState(false)
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setScrolled(true)
-            } else {
-                setScrolled(false)
-            }
-        }
-
-        window.addEventListener("scroll", handleScroll)
-
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, [])
-
-    const handleNavClick = () => {
-        setMenuOpen(false)
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
     }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
-    return (
-        <header className={scrolled ? "header scroll" : "header"}>
-            <div className="logo">
-                <h1><span>Muhammad</span>Taha</h1>
-            </div>
+  const handleNavClick = () => {
+    setMenuOpen(false)
+  }
 
-            <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-                <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
-            </button>
+  return (
+    <header className={scrolled ? "header scroll" : "header"}>
+      <div className="logo">
+        <h1><span>Muhammad</span>Taha</h1>
+      </div>
 
-            <ul className={`links ${menuOpen ? "links-open" : ""}`}>
-                <li><a href="#hero" onClick={handleNavClick}>Home</a></li>
-                <li><a href="#about" onClick={handleNavClick}>About</a></li>
-                <li><a href="#project" onClick={handleNavClick}>Project</a></li>
-                <li><a href="#certifications" onClick={handleNavClick}>Certifications</a></li>
-                <li><a href="#serv" onClick={handleNavClick}>Services</a></li>
-                <li><a href="#contact" onClick={handleNavClick}>Contact</a></li>
-            </ul>
+      <button
+        className={`hamburger ${menuOpen ? "active" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-            <ul className="icons">
-                <li><a href="https://github.com/muhammadtaharana" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
-                <li><a href="https://instagram.com/muhammadtaharana" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} /></a></li>
-                <li><a href="https://linkedin.com/in/muhammad-taha-Rajpoot" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a></li>
-            </ul>
-        </header>
-    )
+      <ul className={`links ${menuOpen ? "open" : ""}`}>
+        <li><a href="#hero" onClick={handleNavClick}>Home</a></li>
+        <li><a href="#about" onClick={handleNavClick}>About</a></li>
+        <li><a href="#project" onClick={handleNavClick}>Projects</a></li>
+        <li><a href="#certifications" onClick={handleNavClick}>Certifications</a></li>
+        <li><a href="#serv" onClick={handleNavClick}>Services</a></li>
+        <li><a href="#contact" onClick={handleNavClick}>Contact</a></li>
+      </ul>
+
+      <ul className="icons">
+        <li><a href="https://github.com/muhammadtaharana" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
+        <li><a href="https://linkedin.com/in/muhammad-taha-Rajpoot" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+      </ul>
+    </header>
+  )
 }
 
 export default Header

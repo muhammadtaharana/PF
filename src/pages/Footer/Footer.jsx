@@ -1,30 +1,28 @@
 import "./Footer.css"
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-function Footer(){
-
-  return(
-
+function Footer() {
+  return (
     <footer className="footer">
-
       <div className="footer-container">
-
-        <p>© 2026 Muhammad Taha</p>
-
-        <div className="social-icons">
-
-          <a href="https://github.com/muhammadtaharana"><FaGithub/></a>
-          <a href="https://linkedin.com/in/muhammadtaharana"><FaLinkedin/></a>
-          <a href="https://instagram.com/muhammadtaharana"><FaInstagram/></a>
-
+        <div className="footer-left">
+          <span className="footer-logo"><span className="footer-dim">Muhammad</span>Taha</span>
+          <p className="footer-copy">© 2026 Muhammad Taha Rajpoot. All rights reserved.</p>
         </div>
 
+        <div className="footer-right">
+          <div className="social-icons">
+            <a href="https://github.com/muhammadtaharana" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+            <a href="https://linkedin.com/in/muhammad-taha-Rajpoot" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+          </div>
+        </div>
       </div>
 
+      <div className="footer-bottom">
+        <span>TeamCyberØps · Khanewal, Pakistan</span>
+      </div>
     </footer>
-
   )
-
 }
 
 export default Footer;

@@ -11,110 +11,107 @@ import img8 from "../../assets/images/SubToIPFinder.jpg";
 
 const projects = [
   {
-    title: "Network Sniffer",
-    img: img1,
-    desc: "Advanced packet capturing and analysis tool for network traffic inspection and protocol analysis.",
-    skills: ["Python", "Scapy", "Wireshark"]
+    title: "sub2ip",
+    img: img8,
+    desc: "Robust Bash-based resolution engine that converts subdomains into IPv4 addresses — essential for large-scope recon pipelines.",
+    skills: ["Shell", "Bash", "DNS"],
+    github: "https://github.com/muhammadtaharana/sub2ip",
+    stars: "★1"
   },
-
   {
-    title: "Safe Vault",
-    img: img2,
-    desc: "Secure password manager with encryption, authentication, and secure credential storage.",
-    skills: ["Python", "Encryption", "Database"]
+    title: "ip2sub (Origin Mapper)",
+    img: img7,
+    desc: "High-stealth reconnaissance tool to unmask real backend servers behind Cloud WAFs and CDNs by correlating IPs with SSL certificates.",
+    skills: ["Shell", "SSL", "CDN Bypass"],
+    github: "https://github.com/muhammadtaharana/ip2sub",
+    stars: "★1"
   },
-
-  {
-    title: "Port Scanner",
-    img: img3,
-    desc: "Multi-threaded port scanning tool for network reconnaissance and vulnerability assessment.",
-    skills: ["Python", "Bash", "Networking"]
-  },
-
   {
     title: "Host Header Injector",
     img: img4,
-    desc: "Penetration testing tool for detecting host header injection vulnerabilities in web applications.",
-    skills: ["Python", "Burp Suite", "HTTP"]
+    desc: "HTTP Header Inspector — detects malicious header reflections and header-injection vulnerabilities in web applications.",
+    skills: ["Shell", "HTTP", "Burp Suite"],
+    github: "https://github.com/muhammadtaharana/hhi",
+    stars: "★1"
   },
-
   {
-    title: "CORS Vulnerability Scanner",
+    title: "Link Categorizer",
     img: img5,
-    desc: "Automated scanner for detecting Cross-Origin Resource Sharing misconfigurations and exploits.",
-    skills: ["JavaScript", "Python", "Web Security"]
+    desc: "Professional-grade URL categorization tool for security assessment and bug bounty hunting. Auto-sorts links by type and risk.",
+    skills: ["Shell", "OSINT", "Recon"],
+    github: "https://github.com/muhammadtaharana/link_categorizer",
+    stars: "★1"
   },
-
   {
-    title: "CSRF Vulnerability Scanner",
+    title: "TeamCyberOps Suite",
+    img: img1,
+    desc: "All-in-one automated offensive security suite v5.0.5+. Orchestrates recon, exploitation, and OSINT pipelines automatically.",
+    skills: ["Python", "Automation", "OSINT"],
+    github: "https://github.com/mohidqx/TeamCyberOps-Suite"
+  },
+  {
+    title: "AutoInjectX",
     img: img6,
-    desc: "Comprehensive tool for identifying Cross-Site Request Forgery vulnerabilities in web applications.",
-    skills: ["Python", "Bash", "OWASP"]
+    desc: "Multi-threaded XSS fuzzer with automated payload injection, reflected/stored/DOM XSS detection, and false-positive reduction.",
+    skills: ["Python", "XSS", "Fuzzing"],
+    github: "https://github.com/mohidqx/AutoInjectX",
+    stars: "★1"
   },
-
   {
-    title: "Origin IP Mapper",
-    img: img7,
-    desc: "Geolocation and IP reconnaissance tool for mapping target origins and network infrastructure.",
-    skills: ["Python", "Bash", "Networking"]
+    title: "NucleiFuzzer",
+    img: img3,
+    desc: "Advanced web vulnerability scanner and automation framework built around the Nuclei engine for multi-template scanning.",
+    skills: ["Shell", "Nuclei", "Scanner"],
+    github: "https://github.com/mohidqx/NucleiFuzzer"
   },
-
   {
-    title: "Sub to IP Finder",
-    img: img8,
-    desc: "Subdomain enumeration and DNS resolution tool for discovering IP addresses and network mapping.",
-    skills: ["Python", "DNS", "Reconnaissance"]
+    title: "Network Sniffer & Scanner",
+    img: img2,
+    desc: "Multi-threaded port scanning and packet capturing tool for network reconnaissance and vulnerability assessment.",
+    skills: ["Python", "Scapy", "Networking"],
+    github: "https://github.com/muhammadtaharana"
   }
 ];
 
 export default function Project() {
-
   return (
-
-    <section className="project reveal" id="project">
-
-      <div className="title">
-        <h2>Project</h2>
+    <section className="project-section" id="project">
+      <div className="section-title">
+        <span className="section-tag">MY WORK</span>
+        <h2>Security Arsenal</h2>
+        <div className="title-line"></div>
       </div>
 
       <div className="projects-container">
-
         {projects.map((project, index) => (
-
           <div className="project-card" key={index}>
-
-            <img src={project.img} alt={project.title} />
-
-            <h3>{project.title}</h3>
-
-            <p>{project.desc}</p>
-
-            <div className="skills">
-              {project.skills.map((skill, i) => (
-                <a href="#" key={i}>{skill}</a>
-              ))}
+            <div className="project-img-wrap">
+              <img src={project.img} alt={project.title} />
             </div>
 
-            <div className="btns">
+            <div className="project-card-body">
+              <div className="project-card-header">
+                <h3>{project.title}</h3>
+                {project.stars && <span className="project-stars">{project.stars}</span>}
+              </div>
 
-              <a href="#" className="btn">
-                <i className="fab fa-github"></i> GitHub
-              </a>
+              <p>{project.desc}</p>
 
-              <a href="#" className="btn">
-                <i className="fas fa-external-link-alt"></i> Live Demo
-              </a>
+              <div className="project-skills">
+                {project.skills.map((skill, i) => (
+                  <span key={i} className="skill-tag">{skill}</span>
+                ))}
+              </div>
 
+              <div className="project-btns">
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-btn">
+                  <i className="fab fa-github"></i> GitHub
+                </a>
+              </div>
             </div>
-
           </div>
-
         ))}
-
       </div>
-
     </section>
-
   );
-
 }

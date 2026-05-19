@@ -1,75 +1,74 @@
 import "./Skills.css";
 
 import {
-FaHtml5,
-FaCss3Alt,
-FaJs,
-FaReact,
-FaGitAlt,
-FaGithub,
-FaFigma,
-FaNodeJs,
-FaJava
+  FaPython,
+  FaLinux,
+  FaDocker,
+  FaGitAlt,
+  FaGithub,
+  FaTerminal
 } from "react-icons/fa";
 
 import {
-SiUnity,
-SiTailwindcss,
-SiFirebase,
-SiMongodb,
-SiExpress,
-SiMysql,
-SiPhp,
-SiKalilinux,
-SiOwasp,
-SiWireshark,
-SiPython
+  SiKalilinux,
+  SiOwasp,
+  SiWireshark,
+  SiGnubash,
+  SiRedhat,
+  SiBurpsuite,
+  SiGooglecloud
 } from "react-icons/si";
 
-function Skills(){
+import {
+  FaShieldHalved,
+  FaBug,
+  FaNetworkWired
+} from "react-icons/fa6";
 
-return(
+function Skills() {
+  return (
+    <div className="skills-section">
+      <div className="skills-slider">
+        <div className="skills-track">
+          {/* First set */}
+          <SiKalilinux title="Kali Linux" />
+          <FaPython title="Python" />
+          <SiBurpsuite title="Burp Suite" />
+          <SiWireshark title="Wireshark" />
+          <FaShieldHalved title="Security" />
+          <SiOwasp title="OWASP" />
+          <FaLinux title="Linux" />
+          <SiRedhat title="Red Hat" />
+          <FaBug title="Bug Bounty" />
+          <FaNetworkWired title="Networking" />
+          <SiGnubash title="Bash" />
+          <FaDocker title="Docker" />
+          <SiGooglecloud title="Google Cloud" />
+          <FaGitAlt title="Git" />
+          <FaGithub title="GitHub" />
+          <FaTerminal title="Terminal" />
 
-<div className="skills">
-<div className="skills-slider">
-<div className="skills-track">
-
-<FaHtml5/>
-<FaCss3Alt/>
-<FaJs/>
-<FaReact/>
-
-<FaJava/>
-<SiMysql/>
-<SiPhp/>
-
-<FaNodeJs/>
-<SiExpress/>
-<SiMongodb/>
-
-<FaGitAlt/>
-<FaGithub/>
-<FaFigma/>
-
-<SiUnity/>
-<SiTailwindcss/>
-<SiFirebase/>
-
-<SiKalilinux/>
-<SiOwasp/>
-<SiWireshark/>
-
-<SiPython/>
-
-
-</div>
-
-</div>
-
-</div>
-
-)
-
+          {/* Duplicate for infinite scroll */}
+          <SiKalilinux title="Kali Linux" />
+          <FaPython title="Python" />
+          <SiBurpsuite title="Burp Suite" />
+          <SiWireshark title="Wireshark" />
+          <FaShieldHalved title="Security" />
+          <SiOwasp title="OWASP" />
+          <FaLinux title="Linux" />
+          <SiRedhat title="Red Hat" />
+          <FaBug title="Bug Bounty" />
+          <FaNetworkWired title="Networking" />
+          <SiGnubash title="Bash" />
+          <FaDocker title="Docker" />
+          <SiGooglecloud title="Google Cloud" />
+          <FaGitAlt title="Git" />
+          <FaGithub title="GitHub" />
+          <FaTerminal title="Terminal" />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Skills;

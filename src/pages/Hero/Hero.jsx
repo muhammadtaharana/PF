@@ -15,27 +15,41 @@ export default function Hero() {
 
   return (
     <section className="hero" id="hero">
-      <h1 className="background-text">Muhammad  Taha</h1>
+      {/* Ambient glow orbs */}
+      <div className="hero-glow hero-glow-1"></div>
+      <div className="hero-glow hero-glow-2"></div>
+
+      {/* Scrolling background text */}
+      <div className="background-text-track track-top">
+        <span>MUHAMMAD TAHA&nbsp;&nbsp;·&nbsp;&nbsp;CYBERSECURITY&nbsp;&nbsp;·&nbsp;&nbsp;MUHAMMAD TAHA&nbsp;&nbsp;·&nbsp;&nbsp;PENETRATION TESTER&nbsp;&nbsp;·&nbsp;&nbsp;MUHAMMAD TAHA&nbsp;&nbsp;·&nbsp;&nbsp;CYBERSECURITY&nbsp;&nbsp;·&nbsp;&nbsp;MUHAMMAD TAHA&nbsp;&nbsp;·&nbsp;&nbsp;PENETRATION TESTER&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+      </div>
+      <div className="background-text-track track-bottom reverse">
+        <span>RED HAT CERTIFIED&nbsp;&nbsp;·&nbsp;&nbsp;TAHA RAJPOOT&nbsp;&nbsp;·&nbsp;&nbsp;CS ENGINEER&nbsp;&nbsp;·&nbsp;&nbsp;TEAMCYBERØPS&nbsp;&nbsp;·&nbsp;&nbsp;RED HAT CERTIFIED&nbsp;&nbsp;·&nbsp;&nbsp;TAHA RAJPOOT&nbsp;&nbsp;·&nbsp;&nbsp;CS ENGINEER&nbsp;&nbsp;·&nbsp;&nbsp;TEAMCYBERØPS&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+      </div>
+
+      {/* Film grain overlay */}
+      <div className="hero-grain"></div>
 
       <div className="hero-center-content">
-        <h1>Hi! I'm Taha</h1>
+        <div className="hero-tag">CYBERSECURITY ENGINEER</div>
+        <h1>Hi! I'm <span className="hero-name-accent">Taha</span></h1>
         <p className="hero-subtitle">
-          Cybersecurity Expert &nbsp;|&nbsp; Penetration Tester &nbsp;|&nbsp; CS Engineer
+          Penetration Tester &nbsp;·&nbsp; Red Hat Certified &nbsp;·&nbsp; CS Engineer
         </p>
         
-        {/* Spotlight Interactive Image - Ab ye center mein hogi */}
+        {/* Spotlight Interactive Image */}
         <div 
           className="image-container" 
           onMouseMove={handleMouseMove}
           style={{ "--x": `${mousePos.x}px`, "--y": `${mousePos.y}px` }}
         >
-          <img src="/img1.png" className="base-image" alt="Profile" />
-          <img src="/img2.png" className="hover-image" alt="Hovered" />
+          <img src="/img1.png" className="base-image" alt="Muhammad Taha Rajpoot" />
+          <img src="/img2.png" className="hover-image" alt="Spotlight reveal" />
         </div>
 
         <div className="hero-btns">
-          <a href="#contact" className="btn-main">Contact</a>
-          <a href="#about" className="btn-sec">Who I'm</a>
+          <a href="#contact" className="btn-main">Contact Me</a>
+          <a href="#about" className="btn-sec">Who I Am</a>
         </div>
 
         {/* CV Action Buttons */}
@@ -56,7 +70,7 @@ export default function Hero() {
         isOpen={cvViewerOpen}
         onClose={() => setCvViewerOpen(false)}
         documentUrl="/taha_cv_v2.docx"
-        documentTitle="Muhammad Taha Rajpoot - CV"
+        documentTitle="Muhammad Taha Rajpoot — CV"
       />
     </section>
   );
